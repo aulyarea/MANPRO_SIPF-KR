@@ -1,0 +1,638 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "Aulya Rea Sagita (Admin)",
+      "email": "admin@sipf.com",
+      "password": "admin123",
+      "role": "admin",
+      "status": "Aktif",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      "phone": "08123456789"
+    },
+    {
+      "id": "u-manager",
+      "name": "Hendrawan (Manager)",
+      "email": "manager@sipf.com",
+      "password": "manager123",
+      "role": "manager",
+      "status": "Aktif",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100",
+      "phone": "08123456789"
+    },
+    {
+      "id": "u-depok",
+      "name": "Pak Usman (Depok User)",
+      "email": "depok@sipf.com",
+      "password": "regional123",
+      "role": "regional_user",
+      "region": "Depok",
+      "status": "Aktif",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+    },
+    {
+      "id": "u-bogor",
+      "name": "Ibu Rina (Bogor User)",
+      "email": "bogor@sipf.com",
+      "password": "regional123",
+      "role": "regional_user",
+      "region": "Bogor",
+      "status": "Aktif",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP-001",
+      "name": "PT Indofood CBP Sukses Makmur",
+      "address": "Jl. Raya Jakarta-Bogor Km. 26, Ciracas, Jakarta Timur",
+      "phone": "021-8711681",
+      "email": "contact@indofoodcbp.co.id",
+      "status": "Aktif"
+    },
+    {
+      "id": "SUP-002",
+      "name": "PT Logistik Jaya Sejahtera",
+      "address": "Kawasan Industri MM2100 Blok C-3, Cikarang Barat, Bekasi",
+      "phone": "021-89907722",
+      "email": "info@logistikjaya.com",
+      "status": "Aktif"
+    },
+    {
+      "id": "SUP-003",
+      "name": "PT Sumber Pangan Nusantara",
+      "address": "Jl. Industri Raya No. 12, Tangerang",
+      "phone": "021-5523456",
+      "email": "marketing@sumberpangan.co.id",
+      "status": "Aktif"
+    },
+    {
+      "id": "SUP-004",
+      "name": "PT Distribusi Unggul Mandiri",
+      "address": "Jl. Margonda Raya No. 45, Depok",
+      "phone": "021-7788992",
+      "email": "hub@distribusiunggul.com",
+      "status": "Nonaktif"
+    }
+  ],
+  "gudang": [
+    {
+      "id": "GDG-001",
+      "name": "Gudang Utama Jakarta",
+      "location": "Sunter, Jakarta Utara",
+      "capacity": 5000,
+      "utilized": 3800,
+      "status": "Aktif"
+    },
+    {
+      "id": "GDG-002",
+      "name": "Gudang Regional Depok",
+      "location": "Cimanggis, Depok",
+      "capacity": 2000,
+      "utilized": 950,
+      "status": "Aktif"
+    },
+    {
+      "id": "GDG-003",
+      "name": "Gudang Penyangga Bogor",
+      "location": "Tajur, Bogor",
+      "capacity": 1500,
+      "utilized": 1400,
+      "status": "Aktif"
+    },
+    {
+      "id": "GDG-004",
+      "name": "Gudang Transit Bekasi",
+      "location": "Cibitung, Bekasi",
+      "capacity": 3000,
+      "utilized": 500,
+      "status": "Nonaktif"
+    }
+  ],
+  "distributors": [
+    {
+      "id": "DST-001",
+      "name": "CV Jaya Distribusi Depok",
+      "region": "Depok",
+      "phone": "0812-3456-7890",
+      "status": "Aktif"
+    },
+    {
+      "id": "DST-002",
+      "name": "PT Sentosa Distribusi Bogor",
+      "region": "Bogor",
+      "phone": "0813-9876-5432",
+      "status": "Aktif"
+    },
+    {
+      "id": "DST-003",
+      "name": "CV Berkah Abadi Jakarta",
+      "region": "Jakarta",
+      "phone": "0811-2233-4455",
+      "status": "Aktif"
+    },
+    {
+      "id": "DST-004",
+      "name": "PT Prima Trans Bekasi",
+      "region": "Bekasi",
+      "phone": "0856-7788-9900",
+      "status": "Aktif"
+    },
+    {
+      "id": "DST-005",
+      "name": "CV Depok Mandiri Logistik",
+      "region": "Depok",
+      "phone": "0878-5566-7788",
+      "status": "Nonaktif"
+    }
+  ],
+  "wilayah": [
+    {
+      "id": "REG-01",
+      "name": "Depok",
+      "distributorsCount": 2
+    },
+    {
+      "id": "REG-02",
+      "name": "Bogor",
+      "distributorsCount": 1
+    },
+    {
+      "id": "REG-03",
+      "name": "Jakarta",
+      "distributorsCount": 1
+    },
+    {
+      "id": "REG-04",
+      "name": "Bekasi",
+      "distributorsCount": 1
+    },
+    {
+      "id": "REG-05",
+      "name": "Tangerang",
+      "distributorsCount": 0
+    }
+  ],
+  "requests": [
+    {
+      "id": "REQ-20260616-004",
+      "requesterName": "Ibu Rina (Bogor User)",
+      "region": "Bogor",
+      "status": "Processed",
+      "items": [
+        {
+          "id": "itm-1781610022466-0",
+          "name": "Minyak Kita ",
+          "qty": 10,
+          "unit": "Dus",
+          "note": ""
+        },
+        {
+          "id": "itm-1781610022473-1",
+          "name": "Chiki Ball",
+          "qty": 5,
+          "unit": "Dus",
+          "note": ""
+        },
+        {
+          "id": "itm-1781610022475-2",
+          "name": "Beras",
+          "qty": 4,
+          "unit": "Karton",
+          "note": ""
+        },
+        {
+          "id": "itm-1781610022475-3",
+          "name": "Air Mineral",
+          "qty": 5,
+          "unit": "Dus",
+          "note": ""
+        }
+      ],
+      "createdAt": "2026-06-16T11:40:22.475Z",
+      "updatedAt": "2026-06-25T03:45:24.555Z"
+    },
+    {
+      "id": "REQ-20260613-003",
+      "requesterName": "Toko udin",
+      "region": "Bekasi",
+      "status": "Approved",
+      "items": [
+        {
+          "id": "itm-1781360167492-0",
+          "name": "Shampo, Sabun muka",
+          "qty": 300,
+          "unit": "Pcs",
+          "note": "Tolong waktu pengiriman nya dipercepat"
+        }
+      ],
+      "createdAt": "2026-06-13T14:16:07.492Z",
+      "updatedAt": "2026-06-13T14:17:22.940Z"
+    },
+    {
+      "id": "REQ-20260613-001",
+      "requesterName": "Toko Pak Usman",
+      "region": "Depok",
+      "status": "Approved",
+      "items": [
+        {
+          "id": "itm-01",
+          "name": "Kecap Bango 550ml",
+          "qty": 120,
+          "unit": "Pcs",
+          "note": "Kekurangan stok di rak utama"
+        },
+        {
+          "id": "itm-02",
+          "name": "Saos Sambal ABC 335ml",
+          "qty": 80,
+          "unit": "Pcs",
+          "note": "Permintaan tinggi menjelang liburan"
+        }
+      ],
+      "createdAt": "2026-06-13T10:15:30Z",
+      "updatedAt": "2026-06-13T14:34:13.842Z"
+    },
+    {
+      "id": "REQ-20260613-002",
+      "requesterName": "Toko Bu Rina",
+      "region": "Bogor",
+      "status": "Approved",
+      "items": [
+        {
+          "id": "itm-03",
+          "name": "Indomie Goreng Spesial",
+          "qty": 50,
+          "unit": "Karton",
+          "note": "Persediaan menipis di gudang regional"
+        }
+      ],
+      "createdAt": "2026-06-12T08:30:00Z",
+      "updatedAt": "2026-06-13T09:00:00Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "log-1782368817890-9",
+      "timestamp": "2026-06-25T06:26:57.891Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1782359508884-720",
+      "timestamp": "2026-06-25T03:51:48.884Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
+      "id": "log-1782359124559-814",
+      "timestamp": "2026-06-25T03:45:24.560Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Edit Data",
+      "table": "Requests",
+      "details": "Mereview & input ulang detail permintaan barang REQ-20260616-004"
+    },
+    {
+      "id": "log-1782358944438-265",
+      "timestamp": "2026-06-25T03:42:24.439Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1782358526552-845",
+      "timestamp": "2026-06-25T03:35:26.552Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-1782358502659-796",
+      "timestamp": "2026-06-25T03:35:02.659Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
+      "id": "log-1782358472890-938",
+      "timestamp": "2026-06-25T03:34:32.893Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1782357693008-168",
+      "timestamp": "2026-06-25T03:21:33.011Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-1782313580004-592",
+      "timestamp": "2026-06-24T15:06:20.004Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-1782313506982-21",
+      "timestamp": "2026-06-24T15:05:06.982Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1782313478668-193",
+      "timestamp": "2026-06-24T15:04:38.668Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
+      "id": "log-1781659649534-601",
+      "timestamp": "2026-06-17T01:27:29.534Z",
+      "user": "Ibu Rina (Bogor User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Ibu Rina (Bogor User) berhasil login"
+    },
+    {
+      "id": "log-1781659583007-767",
+      "timestamp": "2026-06-17T01:26:23.007Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
+      "id": "log-1781612072393-8",
+      "timestamp": "2026-06-16T12:14:32.394Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1781610641663-196",
+      "timestamp": "2026-06-16T11:50:41.665Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
+      "id": "log-1781610022508-942",
+      "timestamp": "2026-06-16T11:40:22.512Z",
+      "user": "Ibu Rina (Bogor User) (Bogor)",
+      "action": "Tambah Data",
+      "table": "Requests",
+      "details": "Membuat permintaan barang REQ-20260616-004"
+    },
+    {
+      "id": "log-1781609890583-417",
+      "timestamp": "2026-06-16T11:38:10.588Z",
+      "user": "Ibu Rina (Bogor User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Ibu Rina (Bogor User) berhasil login"
+    },
+    {
+      "id": "log-1781609808767-284",
+      "timestamp": "2026-06-16T11:36:48.772Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-1781609728946-269",
+      "timestamp": "2026-06-16T11:35:28.953Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Edit Data",
+      "table": "Profil",
+      "details": "Mengubah informasi profil sendiri"
+    },
+    {
+      "id": "log-1781609651509-994",
+      "timestamp": "2026-06-16T11:34:11.515Z",
+      "user": "Budi Santoso (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Budi Santoso (Admin) berhasil login"
+    },
+    {
+      "id": "log-1781609217568-587",
+      "timestamp": "2026-06-16T11:26:57.573Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Edit Data",
+      "table": "Profil",
+      "details": "Mengubah informasi profil sendiri"
+    },
+    {
+      "id": "log-1781609120913-478",
+      "timestamp": "2026-06-16T11:25:20.915Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1781361266259-664",
+      "timestamp": "2026-06-13T14:34:26.259Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1781361253846-778",
+      "timestamp": "2026-06-13T14:34:13.846Z",
+      "user": "Budi Santoso (Admin)",
+      "action": "Edit Data",
+      "table": "Requests",
+      "details": "Menyetujui (Accept) permintaan barang REQ-20260613-001"
+    },
+    {
+      "id": "log-1781361167554-870",
+      "timestamp": "2026-06-13T14:32:47.554Z",
+      "user": "Budi Santoso (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Budi Santoso (Admin) berhasil login"
+    },
+    {
+      "id": "log-1781361076683-24",
+      "timestamp": "2026-06-13T14:31:16.683Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1781360461227-431",
+      "timestamp": "2026-06-13T14:21:01.227Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-1781360252397-321",
+      "timestamp": "2026-06-13T14:17:32.397Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1781360242944-924",
+      "timestamp": "2026-06-13T14:17:22.944Z",
+      "user": "Budi Santoso (Admin)",
+      "action": "Edit Data",
+      "table": "Requests",
+      "details": "Menyetujui (Accept) permintaan barang REQ-20260613-003"
+    },
+    {
+      "id": "log-1781360225312-851",
+      "timestamp": "2026-06-13T14:17:05.312Z",
+      "user": "Budi Santoso (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Budi Santoso (Admin) berhasil login"
+    },
+    {
+      "id": "log-1781360186280-265",
+      "timestamp": "2026-06-13T14:16:26.280Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1781360167496-156",
+      "timestamp": "2026-06-13T14:16:07.496Z",
+      "user": "Toko udin (Bekasi)",
+      "action": "Tambah Data",
+      "table": "Requests",
+      "details": "Membuat permintaan barang REQ-20260613-003"
+    },
+    {
+      "id": "log-1781359986514-982",
+      "timestamp": "2026-06-13T14:13:06.514Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-1781359959955-622",
+      "timestamp": "2026-06-13T14:12:39.955Z",
+      "user": "Ibu Rina (Bogor User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Ibu Rina (Bogor User) berhasil login"
+    },
+    {
+      "id": "log-1781359921584-281",
+      "timestamp": "2026-06-13T14:12:01.584Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Pak Usman (Depok User) berhasil login"
+    },
+    {
+      "id": "log-001",
+      "timestamp": "2026-06-13T10:00:00Z",
+      "user": "Budi Santoso (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "Admin login sukses dari IP 192.168.1.5"
+    },
+    {
+      "id": "log-002",
+      "timestamp": "2026-06-13T10:15:30Z",
+      "user": "Pak Usman (Depok User)",
+      "action": "Tambah Data",
+      "table": "Requests",
+      "details": "Membuat permintaan REQ-20260613-001 untuk wilayah Depok"
+    },
+    {
+      "id": "log-003",
+      "timestamp": "2026-06-13T12:00:00Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "Manager login sukses"
+    },
+    {
+      "id": "log-004",
+      "timestamp": "2026-06-13T13:00:00Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Edit Data",
+      "table": "Requests",
+      "details": "Mereview dan memverifikasi permintaan REQ-20260613-002"
+    }
+  ],
+  "historicalDemand": [
+    {
+      "region": "Depok",
+      "product": "Kecap Bango 550ml",
+      "data": [
+        100,
+        120,
+        110,
+        130,
+        125,
+        140
+      ]
+    },
+    {
+      "region": "Depok",
+      "product": "Saos Sambal ABC 335ml",
+      "data": [
+        70,
+        75,
+        80,
+        85,
+        90,
+        88
+      ]
+    },
+    {
+      "region": "Bogor",
+      "product": "Indomie Goreng Spesial",
+      "data": [
+        40,
+        45,
+        42,
+        50,
+        48,
+        55
+      ]
+    },
+    {
+      "region": "Jakarta",
+      "product": "Indomie Goreng Spesial",
+      "data": [
+        200,
+        220,
+        210,
+        230,
+        240,
+        250
+      ]
+    }
+  ]
+}
