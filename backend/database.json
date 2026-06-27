@@ -273,6 +273,38 @@
   ],
   "logs": [
     {
+      "id": "log-1782476499741-986",
+      "timestamp": "2026-06-26T12:21:39.743Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
+      "id": "log-1782474418310-87",
+      "timestamp": "2026-06-26T11:46:58.310Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1782474341784-963",
+      "timestamp": "2026-06-26T11:45:41.784Z",
+      "user": "Hendrawan (Manager)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Hendrawan (Manager) berhasil login"
+    },
+    {
+      "id": "log-1782474300782-531",
+      "timestamp": "2026-06-26T11:45:00.786Z",
+      "user": "Aulya Rea Sagita (Admin)",
+      "action": "Login",
+      "table": "Auth",
+      "details": "User Aulya Rea Sagita (Admin) berhasil login"
+    },
+    {
       "id": "log-1782368817890-9",
       "timestamp": "2026-06-25T06:26:57.891Z",
       "user": "Hendrawan (Manager)",

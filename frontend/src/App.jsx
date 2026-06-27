@@ -19,7 +19,7 @@ const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
 
 // API URL helper
-export const API_URL = 'http://localhost:5000/api';
+export const API_URL = 'https://manpro-sipf-kr-347g.vercel.app/api';
 
 // Simple Alert/Toast Notification Component
 const Toast = ({ message, type, onClose }) => {
