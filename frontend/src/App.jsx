@@ -19,7 +19,7 @@ const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
 
 // API URL helper
-export const API_URL = 'https://manpro-sipf-kr.vercel.app';
+export const API_URL = 'https://manprosipf-kr-production.up.railway.app/';
 
 // Simple Alert/Toast Notification Component
 const Toast = ({ message, type, onClose }) => {
