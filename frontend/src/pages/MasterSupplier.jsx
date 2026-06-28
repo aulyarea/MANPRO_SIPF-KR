@@ -35,7 +35,7 @@ export default function MasterSupplier() {
 
   const fetchSuppliers = async () => {
     try {
-      const res = await fetch(`${API_URL}/suppliers`);
+      const res = await fetch(`${API_URL}/api/suppliers`);
       const data = await res.json();
       setSuppliers(data);
       setLoading(false);
@@ -80,7 +80,7 @@ export default function MasterSupplier() {
     };
 
     const isEdit = !!currentSupplier;
-    const url = isEdit ? `${API_URL}/suppliers/${currentSupplier.id}` : `${API_URL}/suppliers`;
+    const url = isEdit ? `${API_URL}/api/suppliers/${currentSupplier.id}` : `${API_URL}/api/suppliers`;
     const method = isEdit ? 'PUT' : 'POST';
 
     try {
@@ -112,7 +112,7 @@ export default function MasterSupplier() {
   const handleDelete = async (id) => {
     if (!window.confirm("Apakah Anda yakin ingin menghapus supplier ini?")) return;
     try {
-      const res = await fetch(`${API_URL}/suppliers/${id}`, {
+      const res = await fetch(`${API_URL}/api/suppliers/${id}`, {
         method: 'DELETE',
         headers: { 'x-user-name': user.name }
       });

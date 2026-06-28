@@ -22,7 +22,7 @@ export default function ActivityLog() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch(`${API_URL}/logs`);
+      const res = await fetch(`${API_URL}/api/logs`);
       const data = await res.json();
       setLogs(data);
       setLoading(false);

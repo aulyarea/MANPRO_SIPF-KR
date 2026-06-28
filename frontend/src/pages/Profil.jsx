@@ -36,7 +36,7 @@ export default function Profil() {
     setInfoLoading(true);
 
     try {
-      const res = await fetch(`${API_URL}/profile/update`, {
+      const res = await fetch(`${API_URL}/api/profile/update`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -71,7 +71,7 @@ export default function Profil() {
     setPassLoading(true);
 
     try {
-      const res = await fetch(`${API_URL}/profile/change-password`, {
+      const res = await fetch(`${API_URL}/api/profile/change-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

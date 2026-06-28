@@ -22,12 +22,12 @@ export default function LandingPage() {
 
   // Load suppliers and regions
   useEffect(() => {
-    fetch(`${API_URL}/suppliers`)
+    fetch(`${API_URL}/api/suppliers`)
       .then(res => res.json())
       .then(data => setSuppliers(data))
       .catch(err => console.error(err));
 
-    fetch(`${API_URL}/wilayah`)
+    fetch(`${API_URL}/api/wilayah`)
       .then(res => res.json())
       .then(data => setRegions(data))
       .catch(err => console.error(err));
@@ -65,7 +65,7 @@ export default function LandingPage() {
 
     setSubmitLoading(true);
     try {
-      const res = await fetch(`${API_URL}/requests`, {
+      const res = await fetch(`${API_URL}/api/requests`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

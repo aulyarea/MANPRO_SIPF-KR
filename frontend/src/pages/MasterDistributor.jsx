@@ -36,8 +36,8 @@ export default function MasterDistributor() {
   const fetchData = async () => {
     try {
       const [distRes, wilRes] = await Promise.all([
-        fetch(`${API_URL}/distributors`),
-        fetch(`${API_URL}/wilayah`)
+        fetch(`${API_URL}/api/distributors`),
+        fetch(`${API_URL}/api/wilayah`)
       ]);
       const distData = await distRes.json();
       const wilData = await wilRes.json();
@@ -82,7 +82,7 @@ export default function MasterDistributor() {
     };
 
     const isEdit = !!currentDist;
-    const url = isEdit ? `${API_URL}/distributors/${currentDist.id}` : `${API_URL}/distributors`;
+    const url = isEdit ? `${API_URL}/api/distributors/${currentDist.id}` : `${API_URL}/api/distributors`;
     const method = isEdit ? 'PUT' : 'POST';
 
     try {
@@ -114,7 +114,7 @@ export default function MasterDistributor() {
   const handleDelete = async (id) => {
     if (!window.confirm("Apakah Anda yakin ingin menghapus distributor ini?")) return;
     try {
-      const res = await fetch(`${API_URL}/distributors/${id}`, {
+      const res = await fetch(`${API_URL}/api/distributors/${id}`, {
         method: 'DELETE',
         headers: { 'x-user-name': user.name }
       });

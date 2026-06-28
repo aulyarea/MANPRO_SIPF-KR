@@ -30,7 +30,7 @@ export default function MasterWilayah() {
 
   const fetchRegions = async () => {
     try {
-      const res = await fetch(`${API_URL}/wilayah`);
+      const res = await fetch(`${API_URL}/api/wilayah`);
       const data = await res.json();
       setRegions(data);
       setLoading(false);
@@ -63,7 +63,7 @@ export default function MasterWilayah() {
     };
 
     const isEdit = !!currentRegion;
-    const url = isEdit ? `${API_URL}/wilayah/${currentRegion.id}` : `${API_URL}/wilayah`;
+    const url = isEdit ? `${API_URL}/api/wilayah/${currentRegion.id}` : `${API_URL}/api/wilayah`;
     const method = isEdit ? 'PUT' : 'POST';
 
     try {
@@ -95,7 +95,7 @@ export default function MasterWilayah() {
   const handleDelete = async (id) => {
     if (!window.confirm("Apakah Anda yakin ingin menghapus wilayah ini? Menghapus wilayah akan berdampak pada pemetaan distributor.")) return;
     try {
-      const res = await fetch(`${API_URL}/wilayah/${id}`, {
+      const res = await fetch(`${API_URL}/api/wilayah/${id}`, {
         method: 'DELETE',
         headers: { 'x-user-name': user.name }
       });

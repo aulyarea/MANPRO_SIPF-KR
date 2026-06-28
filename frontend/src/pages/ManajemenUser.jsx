@@ -34,8 +34,8 @@ export default function UserManagement() {
   const fetchData = async () => {
     try {
       const [usrRes, wilRes] = await Promise.all([
-        fetch(`${API_URL}/users`),
-        fetch(`${API_URL}/wilayah`)
+        fetch(`${API_URL}/api/users`),
+        fetch(`${API_URL}/api/wilayah`)
       ]);
       const usrData = await usrRes.json();
       const wilData = await wilRes.json();
@@ -70,7 +70,7 @@ export default function UserManagement() {
     };
 
     try {
-      const res = await fetch(`${API_URL}/users`, {
+      const res = await fetch(`${API_URL}/api/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ export default function UserManagement() {
   const handleResetPassword = async (id, name) => {
     if (!window.confirm(`Reset password untuk ${name} ke password default?`)) return;
     try {
-      const res = await fetch(`${API_URL}/users/${id}/reset-password`, {
+      const res = await fetch(`${API_URL}/api/users/${id}/reset-password`, {
         method: 'POST',
         headers: { 'x-user-name': loggedInUser.name }
       });
@@ -115,7 +115,7 @@ export default function UserManagement() {
       return;
     }
     try {
-      const res = await fetch(`${API_URL}/users/${id}/toggle-status`, {
+      const res = await fetch(`${API_URL}/api/users/${id}/toggle-status`, {
         method: 'POST',
         headers: { 'x-user-name': loggedInUser.name }
       });

@@ -40,7 +40,7 @@ export default function MasterGudang() {
 
   const fetchGudang = async () => {
     try {
-      const res = await fetch(`${API_URL}/gudang`);
+      const res = await fetch(`${API_URL}/api/gudang`);
       const data = await res.json();
       setGudangList(data);
       setLoading(false);
@@ -90,7 +90,7 @@ export default function MasterGudang() {
     };
 
     const isEdit = !!currentGudang;
-    const url = isEdit ? `${API_URL}/gudang/${currentGudang.id}` : `${API_URL}/gudang`;
+    const url = isEdit ? `${API_URL}/api/gudang/${currentGudang.id}` : `${API_URL}/api/gudang`;
     const method = isEdit ? 'PUT' : 'POST';
 
     try {
@@ -122,7 +122,7 @@ export default function MasterGudang() {
   const handleDelete = async (id) => {
     if (!window.confirm("Apakah Anda yakin ingin menghapus gudang ini?")) return;
     try {
-      const res = await fetch(`${API_URL}/gudang/${id}`, {
+      const res = await fetch(`${API_URL}/api/gudang/${id}`, {
         method: 'DELETE',
         headers: { 'x-user-name': user.name }
       });
