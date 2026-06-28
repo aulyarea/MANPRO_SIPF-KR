@@ -103,12 +103,12 @@ export default function Dashboard() {
   const fetchData = async () => {
     try {
       const [supRes, gdgRes, dstRes, wilRes, reqRes, logRes] = await Promise.all([
-        fetch(`${API_URL}/suppliers`),
-        fetch(`${API_URL}/gudang`),
-        fetch(`${API_URL}/distributors`),
-        fetch(`${API_URL}/wilayah`),
-        fetch(`${API_URL}/requests`),
-        fetch(`${API_URL}/logs`)
+        fetch(`${API_URL}/api/suppliers`),
+        fetch(`${API_URL}/api/gudang`),
+        fetch(`${API_URL}/api/distributors`),
+        fetch(`${API_URL}/api/wilayah`),
+        fetch(`${API_URL}/api/requests`),
+        fetch(`${API_URL}/api/logs`)
       ]);
 
       const [sups, gdgs, dsts, wils, reqs, logs] = await Promise.all([
@@ -145,7 +145,7 @@ export default function Dashboard() {
     if (!forecastRegion || !forecastProduct) return;
     setForecastLoading(true);
     try {
-      const res = await fetch(`${API_URL}/forecasting?region=${forecastRegion}&product=${forecastProduct}`);
+      const res = await fetch(`${API_URL}/api/forecasting?region=${forecastRegion}&product=${forecastProduct}`);
       const data = await res.json();
       setForecastData(data);
     } catch (err) {
@@ -164,7 +164,7 @@ export default function Dashboard() {
   // Request actions (Admin)
   const handleAcceptRequest = async (id) => {
     try {
-      const res = await fetch(`${API_URL}/requests/${id}/accept`, {
+      const res = await fetch(`${API_URL}/api/requests/${id}/accept`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -183,7 +183,7 @@ export default function Dashboard() {
   const handleDeleteRequest = async (id) => {
     if (!window.confirm("Hapus permintaan ini?")) return;
     try {
-      const res = await fetch(`${API_URL}/requests/${id}`, {
+      const res = await fetch(`${API_URL}/api/requests/${id}`, {
         method: 'DELETE',
         headers: { 
           'x-user-name': user.name 
@@ -220,7 +220,7 @@ export default function Dashboard() {
   const handleSaveRequestEdits = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${API_URL}/requests/${editingRequest.id}`, {
+      const res = await fetch(`${API_URL}/api/requests/${editingRequest.id}`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
@@ -275,7 +275,7 @@ export default function Dashboard() {
 
     setSubmitLoading(true);
     try {
-      const res = await fetch(`${API_URL}/requests`, {
+      const res = await fetch(`${API_URL}/api/requests`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
